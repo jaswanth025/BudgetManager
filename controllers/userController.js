@@ -23,6 +23,7 @@ const loginController = async (req, res) => {
 //Register Callback
 const registerController = async (req, res) => {
   try {
+    console.log("working");
     const newUser = new userModel(req.body);
     await newUser.save();
     res.status(201).json({
